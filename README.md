@@ -1,1 +1,10 @@
-# logistic-regression-binary-classification-cpp
+## An attempt to make a logistic regression in C++
+This code implements a binary classification problem using logistic regression. Logistic regression is a machine learning algorithm used for binary classification problems, where the goal is to predict the class of a given input data point.
+
+The code generates two datasets: a training dataset and a test dataset. Each dataset has 500 data points in each of two classes. The two classes are generated randomly using the rand() function. For each class, two random values between 0 and 1 are generated for the first dataset, and two random values between 1 and 2 are generated for the second dataset. The train_dataset and test_dataset vectors store each data point along with its associated class label.
+
+After the datasets are generated, the code trains a logistic regression model on the train_dataset using stochastic gradient descent. The model is trained by iterating over the training dataset num_iterations times. In each iteration, a random data point from the training dataset is selected, and the model parameters are updated using the gradient descent algorithm. The gradient descent algorithm updates the model parameters such that the cost function is minimized. The cost function is defined as the negative log-likelihood of the Bernoulli distribution, which is used to model the probability of each data point belonging to the positive class. The logistic function is used to model the probability of the data point belonging to the positive class, and the gradient of the logistic function is used in the gradient descent algorithm.
+
+After the model is trained, the code uses the trained model to predict the class of each data point in the test_dataset. The accuracy of the model is then calculated by comparing the predicted class labels with the true class labels in the test_dataset. The accuracy is defined as the number of correct predictions divided by the total number of predictions.
+
+Finally, the code prints the accuracy of the model on the test dataset. This tells us how well the model is able to generalize to new data points that were not used in the training phase.
